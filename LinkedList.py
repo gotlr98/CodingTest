@@ -28,8 +28,20 @@ class LinkedList:
             self.cur = self.cur.next
         pop_val = self.cur.next.data
         self.cur.next = None
+        self.nodeNum -= 1
+
         return pop_val
-        
+    
+    def find(self, data):
+        self.cur = self.head
+        count = 0
+        while True:
+            if (self.cur.next.data == data):
+                break
+            self.cur = self.cur.next
+            count += 1
+        return count+1
+
 
 l = LinkedList()
 l.append(10)
@@ -37,7 +49,7 @@ l.append(20)
 l.append(30)
 l.append(40)
 l.append(50)
-print(l.pop())
+print(l.find(50))
 
 
 
