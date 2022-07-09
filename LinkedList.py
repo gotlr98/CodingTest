@@ -49,7 +49,7 @@ l.append(20)
 l.append(30)
 l.append(40)
 l.append(50)
-print(l.find(50))
+print(l.find(30))
 
 
 
