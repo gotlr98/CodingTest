@@ -68,3 +68,5 @@ for i in range(num_peo):
     if accu > limit:
         break
 print(i)
+
+
