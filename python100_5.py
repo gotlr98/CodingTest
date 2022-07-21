@@ -94,3 +94,39 @@ people = [
          ]
 
 print(len(set(people)))
+
+# 문제 48 : 대소문자 바꿔서 출력하기
+
+sentence = input()
+
+for i in range(len(sentence)):
+    if sentence[i].upper() == sentence[i]:
+        print(sentence[i].lower(), end='')
+    elif sentence[i].lower() == sentence[i]:
+        print(sentence[i].upper(), end='')
+
+# 문제 49 : 최대값 구하기
+
+input_num = list(map(int, input().split()))
+num = input_num[0]
+
+for i in range(1, len(input_num)):
+    if num < input_num[i]:
+        num = input_num[i]
+print(num)
+
+# 문제 50 : 버블정렬
+# 아래 코드의 빈 칸을 채우자
+
+def bubble(n, data):
+    for i in range(n-1):
+        for j in range(n-i-1):
+            if data[j] > data[j+1]:
+                data[j], data[j+1] = data[j+1], data[j]
+    for i in range(n):
+        print(data[i], end = ' ')
+
+n = int(input())
+data = list(map(int, input().split()))
+
+bubble(n, data)
