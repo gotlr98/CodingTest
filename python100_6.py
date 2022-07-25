@@ -64,3 +64,14 @@ def check_str(a):
 
 a = input()
 print(check_str(a))
+
+# 문제 54 : 연속되는 수
+
+num = list(map(int,input().split()))
+num = sorted(num)
+stand = num[1]-num[0]
+for i in range(len(num)-1,1,-1):
+    if (num[i]-num[i-1]) != stand:
+        print('NO')
+        break
+print('YES')
