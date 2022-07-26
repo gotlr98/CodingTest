@@ -75,3 +75,18 @@ for i in range(len(num)-1,1,-1):
         print('NO')
         break
 print('YES')
+
+# 문제 55 : 하노이
+
+road = []
+def hanoi(num, start, dest, layover):
+    if num == 1:
+        road.append([start, dest])
+        return None
+    hanoi(num-1, start, layover, dest)
+    road.append([start, dest])
+    hanoi(num-1, layover, dest, start)
+
+user_input = int(input())
+hanoi(user_input, 'A', 'C', 'B')
+print(len(road))
