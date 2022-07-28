@@ -90,3 +90,28 @@ def hanoi(num, start, dest, layover):
 user_input = int(input())
 hanoi(user_input, 'A', 'C', 'B')
 print(len(road))
+
+# 문제 56 : 리스트의 함수 응용
+
+nationWidth = {
+    'korea' : 220877,
+    'Rusia' : 17098242,
+    'China' : 9596961,
+    'France' : 543965,
+    'Japan' : 377915,
+    'England' : 242900
+}
+
+ver = nationWidth['korea']
+diff = ver
+key = ''
+for i in nationWidth.keys():
+    
+    if i == 'korea':
+        pass
+    
+    else:
+        if abs(ver - nationWidth[i]) < diff:
+            diff = abs(ver-nationWidth[i])
+            key = i
+print(key , diff)
