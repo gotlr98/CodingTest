@@ -1,7 +1,10 @@
 def LRU(cacheSize, cities):
+    '''
+    deque  자료형을 사용해서도 풀수 있다
+    '''
     answer = 0
     
-    cache_list=['']*cacheSize
+    cache_list=['']*cacheSize # 이 작업을 해주지 않으면 처음에 배열이 차있지 않아서 pop이 안된다
     
     if cacheSize == 0:
         answer = 5 * len(cities)
