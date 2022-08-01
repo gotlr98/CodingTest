@@ -115,3 +115,9 @@ for i in nationWidth.keys():
             diff = abs(ver-nationWidth[i])
             key = i
 print(key , diff)
+
+# 문제 57 : 0부터 1000까지 수에서 1은 몇번이나 들어갔을까요
+sum = 0
+for i in range(1001):
+    sum += str(i).count('1')
+print(sum)
