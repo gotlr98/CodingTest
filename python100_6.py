@@ -121,3 +121,15 @@ sum = 0
 for i in range(1001):
     sum += str(i).count('1')
 print(sum)
+
+# 문제 58 : 콤마 찍기
+# 숫자를 입력 받고 천단위로 콤마(,)를 찍어주세요.
+
+num = input()
+count = 1
+for i in num:
+    if  (count % 3 == 0) and (count != len(num)):
+        print(i+',',end='')
+    else:
+        print(i, end='')
+    count += 1
