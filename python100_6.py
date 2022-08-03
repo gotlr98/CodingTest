@@ -133,3 +133,17 @@ for i in num:
     else:
         print(i, end='')
     count += 1
+
+# 문제 59 : 빈칸 채우기
+# 총 문자열의 길이는 50으로 제한하고 사용자가 문자열을 입력하면 그 문자열을 가운데 정렬을 해주고,
+# 나머지 부분에는 '='을 채워넣어 주세요
+
+input_str = input()
+len_str = len(input_str)
+k=0
+for i in range(50):
+    if i > 25-len_str//2 and i <= 25+len_str//2:
+        print(input_str[k], end='')
+        k+=1
+    else:
+        print('=', end='')
