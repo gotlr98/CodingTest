@@ -26,3 +26,11 @@ print(output)
 # 에러 번호 출력을 이용해서는 안된다.
 # input을 이용해서는 안된다
 
+
+# 문제 63 : 친해지고 싶어
+# 입력이 주어지면 앞글자만 줄여 출력하기
+
+string = input().split()
+
+for i in string:
+    print(i[0], end='')
