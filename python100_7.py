@@ -34,3 +34,29 @@ string = input().split()
 
 for i in string:
     print(i[0], end='')
+
+# 문제 64 : 이상한 엘레베이터
+# 정량 N에 정확히 맞춰야만 움직이는 화물용 엘레베이터가 있다
+# 화물은 7kg, 3kg 두 가지이며 팔이 아픈 은후는 가장 적게 화물을 옮기고 싶습니다.
+# 예를 들어 정량이 24kg이라면 3kg 8개를 옮기는 것 보다는
+# 7kg 3개, 3kg 1개 즉 4개로 더 적게 옮길 수 있습니다.
+# 입력 : 정량 N이 입력
+# 출력 : 가장 적게 옮길 수 있는 횟수 출력, 만약 정량N이 되지 않으면 -1
+
+n = int(input())
+result = []
+count_7 = 0
+count_3 = 0
+
+# if (n % 3 != 0) or (n % 7 != 0) or (n % 21 != 0):
+#     result = -1
+
+for i in range(n):
+    for j in range(n):
+        if (7*i) + (3*j) == n:
+            result.append(i+j)
+
+if len(result) == 0:
+    print(-1)
+else:
+    print(min(result)+1)
