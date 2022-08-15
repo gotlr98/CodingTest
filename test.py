@@ -10,4 +10,9 @@
     
 # print(sum(b))
 
-print(int('a'))
+# print(int('a'))
+
+import re
+
+a = re.compile('[a-Z]')
+a.findall('abkdo23939aofj')
