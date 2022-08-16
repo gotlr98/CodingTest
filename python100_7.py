@@ -77,3 +77,19 @@ for i in a:
         print([i,b[count]])
 
     count += 1
+
+# 문제 66 : 블럭탑쌓기
+# 입력
+# 탑 = ['ABCDEF', 'BCAD', 'ADEFQRX', 'BDEFG']
+# 규칙 = 'ABD'
+# 출력 = ['가능','불가능','가능','가능']
+
+top = input()
+rule = input()
+
+for t in top:
+    for a in t:
+        if a not in rule:
+            a.replace(a,'')
+
+
