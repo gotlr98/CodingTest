@@ -91,5 +91,6 @@ for t in top:
     for a in t:
         if a not in rule:
             a.replace(a,' ')
+print(rule)
 
 
