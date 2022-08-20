@@ -14,5 +14,5 @@
 
 import re
 
-a = re.compile('[a-Z]')
-a.findall('abkdo23939aofj')
+a = re.compile('[a-z]')
+print(a.findall('abkdo23939aofj'))
