@@ -14,7 +14,7 @@
 
 import re
 
-a = re.compile('[a-z]')
+a = re.compile('[a-z+]')
 print(a.findall('abkdo239j'))
 print(a.findall('zxk##$!)'))
 print(a.findall('가나다라ldofo120##$'))
