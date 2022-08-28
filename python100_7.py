@@ -90,8 +90,10 @@ rule = input()
 conv = []
 for t in top:
     for a in t:
+        count = 0
         # print(a)
         if a in rule:
+            count += 1
             conv.append(a)
 print(conv)
 
