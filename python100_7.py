@@ -88,12 +88,13 @@ top = input()
 rule = input()
 
 conv = []
+count = 0
 for t in top:
     for a in t:
-        count = 0
         if a in rule:
-            count += 1
-            conv.append(a)
+            result += a
+    conv.append(result)
+    result = ''
 print(conv)
 
 
