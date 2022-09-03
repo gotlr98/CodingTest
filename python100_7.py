@@ -96,5 +96,3 @@ for t in top:
     conv.append(result)
     result = ''
 print(conv)
-
-
