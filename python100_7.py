@@ -91,9 +91,9 @@ rule = input()
 
 rule_conv = []
 
-for i in range(len(rule)-1):
-    rule_conv.append(list(combinations(rule, i+1)))
-print(rule_conv)
+# for i in range(len(rule)-1):
+rule_conv.append(list(combinations(rule, 3)))
+print(rule_conv[0][0])
 
 
 count = 0
