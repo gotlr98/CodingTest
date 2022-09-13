@@ -93,6 +93,8 @@ rule_conv = []
 
 # for i in range(len(rule)-1):
 rule_conv.append(list(combinations(rule, 3)))
+rule_conv.append(list(combinations(rule, 2)))
+
 print(rule_conv[0][0])
 
 
