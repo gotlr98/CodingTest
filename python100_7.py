@@ -86,25 +86,31 @@
 
 from itertools import combinations
 
-# top = input()
+top = input().split(',')
 rule = input()
 
 rule_conv = []
+conv = []
+result = ''
 
-# for i in range(len(rule)-1):
-rule_conv.append(list(combinations(rule, 3)))
-rule_conv.append(list(combinations(rule, 2)))
-
-print(rule_conv[0][0])
-
+for i in range(1, len(rule)):
+    rule_conv.append(list(combinations(rule, i+1)))
 
 count = 1
-# for t in top:
-#     for a in t:
-#         if a in rule:
-#             result += a
-#     conv.append(result)
-#     result = ''
-# print(conv)
+for t in top:
+    for a in t:
+        if a in rule:
+            result += a
+    if len(result) > 0:
+        conv.append(result)
+        result = ''
 
 
+# for i in conv:
+#     if len(i) == 1:
+#         for j in range(len(rule)):
+#             if rule[j] == i:
+#                 print('가능', end='')
+#                 continue
+#     else:
+#         print(1)
