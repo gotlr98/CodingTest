@@ -98,7 +98,7 @@ rule_conv.append(list(combinations(rule, 2)))
 print(rule_conv[0][0])
 
 
-count = 0
+count = 1
 # for t in top:
 #     for a in t:
 #         if a in rule:
