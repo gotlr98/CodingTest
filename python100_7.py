@@ -94,7 +94,7 @@ conv = []
 result = ''
 
 for i in range(1, len(rule)):
-    rule_conv.append(list(combinations(rule, i+1)))
+    rule_conv.append(zip(combinations(rule, i+1)))
 
 count = 1
 for t in top:
