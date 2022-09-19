@@ -103,7 +103,7 @@ for t in top:
             result += a
     if len(result) > 0:
         conv.append(result)
-        result = ''
+        result = 'a'
 
 
 # for i in conv:
