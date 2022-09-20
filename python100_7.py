@@ -96,14 +96,14 @@ result = ''
 for i in range(1, len(rule)):
     rule_conv.append(zip(combinations(rule, i+1)))
 
-count = 0
+count = 1
 for t in top:
     for a in t:
         if a in rule:
             result += a
     if len(result) > 0:
         conv.append(result)
-        result = 'a'
+        result = ''
 
 
 # for i in conv:
