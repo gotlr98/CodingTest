@@ -96,7 +96,7 @@ result = ''
 for i in range(1, len(rule)):
     rule_conv.append(zip(combinations(rule, i+1)))
 
-count = 1
+count = 0
 for t in top:
     for a in t:
         if a in rule:
