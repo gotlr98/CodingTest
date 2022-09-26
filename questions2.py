@@ -14,8 +14,10 @@ for i in range(len(users)):
     users_conv[i+1] = users[i]
 for j in range(len(emoticons)):
     for k in users_conv:
-        if j+1 in emoticons_conv:
-            emoticons_conv[j+1]+=(int(users_conv[k][0]) / 100 * emoticons[j+1])
+        # print(int(users_conv[k][0]) / 100 * emoticons[j])
+        if j+1 in emoticons_conv.keys():
+            emoticons_conv[j+1].append(int(users_conv[k][0]) / 100 * emoticons[j+1])
+            # pass
         else:
             emoticons_conv[j+1] = int(users_conv[k][0]) / 100 * emoticons[j]
 
