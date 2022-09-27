@@ -84,26 +84,26 @@
 # 규칙 = 'ABD'
 # 출력 = ['가능','불가능','가능','가능']
 
-from itertools import combinations
+# from itertools import combinations
 
-top = input().split(',')
-rule = input()
+# top = input().split(',')
+# rule = input()
 
-rule_conv = []
-conv = []
-result = ''
+# rule_conv = []
+# conv = []
+# result = ''
 
-for i in range(1, len(rule)):
-    rule_conv.append(zip(combinations(rule, i+1)))
+# for i in range(1, len(rule)):
+#     rule_conv.append(zip(combinations(rule, i+1)))
 
-count = 0
-for t in top:
-    for a in t:
-        if a in rule:
-            result += a
-    if len(result) > 0:
-        conv.append(result)
-        result = ''
+# count = 0
+# for t in top:
+#     for a in t:
+#         if a in rule:
+#             result += a
+#     if len(result) > 0:
+#         conv.append(result)
+#         result = ''
 
 
 # for i in conv:
@@ -114,3 +114,18 @@ for t in top:
 #                 continue
 #     else:
 #         print(1)
+
+# 문제 67 : 민규의 악수
+# 민규는 몇명의 사람들과 악수를 진행하는데 행사에서 진행된 악수횟수가 주어지면
+# 민규가 악수한 횟수와 행사참가자를 출력하라
+
+shake = int(input())
+attend_num = 1
+while True:
+    if ((attend_num) * (attend_num-1) / 2) > shake:
+        break
+    attend_num += 1
+
+shake_minkyu = int(shake - ((attend_num-1) * (attend_num-2) / 2))
+
+print([shake_minkyu, attend_num])
