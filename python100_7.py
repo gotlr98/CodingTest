@@ -119,13 +119,29 @@
 # 민규는 몇명의 사람들과 악수를 진행하는데 행사에서 진행된 악수횟수가 주어지면
 # 민규가 악수한 횟수와 행사참가자를 출력하라
 
-shake = int(input())
-attend_num = 1
-while True:
-    if ((attend_num) * (attend_num-1) / 2) > shake:
-        break
-    attend_num += 1
+# shake = int(input())
+# attend_num = 1
+# while True:
+#     if ((attend_num) * (attend_num-1) / 2) > shake:
+#         break
+#     attend_num += 1
 
-shake_minkyu = int(shake - ((attend_num-1) * (attend_num-2) / 2))
+# shake_minkyu = int(shake - ((attend_num-1) * (attend_num-2) / 2))
 
-print([shake_minkyu, attend_num])
+# print([shake_minkyu, attend_num])
+
+# 문제 68 ; 버스 시간표
+# 버스 시간표와 현재시간이 입력으로 주어지면 남은 시간을 출력하시오
+
+table = input().split(',')
+time = input()
+conv_time = int(time.split(':')[0]) * 60 + int(time.split(':')[1])
+
+for i in range(len(table)):
+    table[i] = int(table[i].split(':')[0]) * 60 + int(table[i].split(':')[1])
+
+for i in table:
+    if conv_time - i > 0:
+        print('지나갔습니다', end=' ')
+    else:
+        print(str(abs(conv_time-i)//60) + '시간' + str(abs(conv_time-i)%60) + '분', end=' ')
