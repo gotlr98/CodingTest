@@ -144,4 +144,4 @@ for i in table:
     if conv_time - i > 0:
         print('지나갔습니다', end=' ')
     else:
-        print(str(abs(conv_time-i)//60) + '시간' + str(abs(conv_time-i)%60) + '분', end=' ')
+        print(str(abs(conv_time-i)//60).zfill(2) + '시간' + str(abs(conv_time-i)%60).zfill(2) + '분', end=' ')
