@@ -133,15 +133,42 @@
 # 문제 68 ; 버스 시간표
 # 버스 시간표와 현재시간이 입력으로 주어지면 남은 시간을 출력하시오
 
-table = input().split(',')
-time = input()
-conv_time = int(time.split(':')[0]) * 60 + int(time.split(':')[1])
+# table = input().split(',')
+# time = input()
+# conv_time = int(time.split(':')[0]) * 60 + int(time.split(':')[1])
 
-for i in range(len(table)):
-    table[i] = int(table[i].split(':')[0]) * 60 + int(table[i].split(':')[1])
+# for i in range(len(table)):
+#     table[i] = int(table[i].split(':')[0]) * 60 + int(table[i].split(':')[1])
 
-for i in table:
-    if conv_time - i > 0:
-        print('지나갔습니다', end=' ')
-    else:
-        print(str(abs(conv_time-i)//60).zfill(2) + '시간' + str(abs(conv_time-i)%60).zfill(2) + '분', end=' ')
+# for i in table:
+#     if conv_time - i > 0:
+#         print('지나갔습니다', end=' ')
+#     else:
+#         print(str(abs(conv_time-i)//60).zfill(2) + '시간' + str(abs(conv_time-i)%60).zfill(2) + '분', end=' ')
+
+# 문제 69 : 골드바흐의 추측
+
+# 2보다 큰 짝수 n이 주어졌을 때, 두개의 소수의 합으로 나타내라
+
+
+def era(n):
+    a = [False,False] + [True]*(n-1)
+    primes=[]
+
+    for i in range(2,n+1):
+        if a[i]:
+            primes.append(i)
+            for j in range(2*i, n+1, i):
+                a[j] = False
+
+    return primes
+
+num = int(input())
+
+prime_list = era(num+1)
+result = []
+for i in prime_list:
+    for j in prime_list:
+        if (i+j) == num and [j,i] not in result:
+            result.append([i,j])
+print(result)
