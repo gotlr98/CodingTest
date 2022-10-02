@@ -172,3 +172,5 @@
 #         if (i+j) == num and [j,i] not in result:
 #             result.append([i,j])
 # print(result)
+
+# 문제 70 : 행렬 곱
