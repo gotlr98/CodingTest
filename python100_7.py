@@ -176,5 +176,21 @@
 # 문제 70 : 행렬 곱
 # 행렬 2개가 주어졌을 때 곱할 수 있는 행렬인지 확인하고 곱할 수 있다면 결과, 없다면 -1을 출력하라
 
-a = input()
-b = input()
+a = ([1,2], 
+    [2,4])
+b = ([1,0],
+    [0,3])
+
+def solution(a, b):
+    result = []
+    k = 0
+    if len(a[1]) == len(b[0]):
+        for i in a:
+            for j in b:
+                k = 1
+        return result
+
+    else:
+        return -1
+
+solution(a,b)
