@@ -187,8 +187,9 @@ def solution(a, b):
     if len(a[1]) == len(b[0]):
         for i in range(len(a)):
             for j in range(len(b)):
-                k+=a[i][j]*b[i][j]
-            result.append(k)
+                for w in range(len(a[0])):
+                    k+=a[i][j]*b[i][j]
+                result.append(k)
             k=0
         print(result)
         return result
