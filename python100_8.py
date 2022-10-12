@@ -19,6 +19,7 @@ def dfs(graph, start):
         if n not in visited:
             visited.append(n)
             while graph[n]:
+                pass
                 
 
     return visited
