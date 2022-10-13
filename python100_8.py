@@ -18,8 +18,7 @@ def dfs(graph, start):
         n = stack.pop()
         if n not in visited:
             visited.append(n)
-            while graph[n]:
-                pass
+            
                 
 
     return visited
