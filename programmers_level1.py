@@ -1,11 +1,37 @@
 # 짝수와 홀수
 
-def solution(num):
-    answer = ''
-    if num % 2 == 0:
-        answer += 'Even'
-    else:
-        answer += 'Odd'
-    return answer
+# def solution(num):
+#     answer = ''
+#     if num % 2 == 0:
+#         answer += 'Even'
+#     else:
+#         answer += 'Odd'
+#     return answer
 
-print(solution(5))
+
+# 평균 구하기
+
+# def solution(arr):
+#     answer = 0
+#     answer = sum(arr) / len(arr)
+#     return answer
+
+# 약수의 합
+
+# def solution(n):
+#     answer = 0
+#     for i in range(1, n+1):
+#         if n % i == 0:
+#             answer += i
+#     return answer
+
+# 자릿수 더하기
+
+# def solution(n):
+#     answer = 0
+
+#     for i in range(len(str(n))):
+#         answer += n % 10
+#         n = n//10
+#     return answer
+
