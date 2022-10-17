@@ -35,3 +35,32 @@
 #         n = n//10
 #     return answer
 
+# 신고 결과 받기
+
+def solution(id_list, report, k):
+    answer = []
+    for i in range(len(id_list)):
+        answer.append(0)
+    
+    report_list = {}
+    for i in id_list:
+        report_list[i] = 0
+
+    report_history = []
+    for i in report:
+        if i not in report_history:
+            report_list[i.split(' ')[1]] += 1
+        report_history.append(i)
+
+    report_name = []
+
+    for i in report_list:
+        if report_list[i] >= k:
+            report_name.append(i)
+
+    for j in report_history:
+        if j.split(' ')[1] in report_name:
+            answer[id_list.index(j.split(' ')[0])] += 1
+    return answer
+
+solution(["muzi", "frodo", "apeach", "neo"], ["muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi"], 2)
