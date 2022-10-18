@@ -51,6 +51,9 @@ def solution(id_list, report, k):
         if i not in report_history:
             report_list[i.split(' ')[1]] += 1
         report_history.append(i)
+    
+    print(report_history)
+    print(report_list)
 
     report_name = []
 
