@@ -47,13 +47,10 @@ def solution(id_list, report, k):
         report_list[i] = 0
 
     report_history = []
-    for i in report:
-        if i not in report_history:
-            report_list[i.split(' ')[1]] += 1
+    for i in set(report):
+        report_list[i.split(' ')[1]] += 1
         report_history.append(i)
-    
-    print(report_history)
-    print(report_list)
+
 
     report_name = []
 
@@ -66,4 +63,3 @@ def solution(id_list, report, k):
             answer[id_list.index(j.split(' ')[0])] += 1
     return answer
 
-solution(["muzi", "frodo", "apeach", "neo"], ["muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi"], 2)
