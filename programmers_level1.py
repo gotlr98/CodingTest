@@ -65,28 +65,36 @@
 
 # 숫자 짝꿍
 
-def solution(X, Y):
-    answer = ''
+# def solution(X, Y):
+#     answer = ''
 
-    mid = ''
-    count = 0
-    for i in X:
-        for j in Y:
-            if i==j:
-                mid += j
-                Y = Y[:count] + Y[count+1:]
-                print(Y)
-            count += 1
-        count = 0
-    a = list(mid)
-    for k in range(len(mid)):
-        answer += max(a)
-        a.remove(max(a))
-    
-    if answer == '':
-        answer = '-1'
-    answer = int(answer)
-    
-    return str(answer)
+#     first_dict={}
+#     second_dict={}
+#     for i in range(0, 10):
+#         first_dict[i] = 0
 
-solution("5525", "1255")
+#     for j in range(0, 10):
+#         second_dict[j] = 0
+
+#     convX = list(X)
+#     convY = list(Y)
+    
+#     for i in convX:
+#         first_dict[int(i)] += 1
+#     for j in convY:
+#         second_dict[int(j)] += 1
+#     a = []
+#     b = []
+#     for i in first_dict:
+#         if first_dict[i] != 0:
+#             a.append([i, first_dict[i]])
+    
+#     for i in second_dict:
+#         if second_dict[i] != 0:
+#             b.append([i, second_dict[i]])
+
+    
+#     print(a, b)
+
+
+
