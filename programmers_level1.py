@@ -119,3 +119,34 @@
 #         return (math.sqrt(n) + 1) ** 2
 #     else:
 #         return -1
+
+# 문자열 내 p와 y의 개수
+
+# def solution(s):
+#     answer = True
+    
+#     s = s.lower()
+    
+#     if s.count('y') == s.count('p'):
+#         return True
+
+#     else:
+#         return False
+
+# 하샤드 수
+
+# def solution(x):
+#     answer = True
+    
+#     sum = 0
+#     k = x
+#     for i in range(len(str(x))):
+#         sum += k % 10
+#         k = k // 10
+#     print(sum)
+#     if x % sum == 0:
+#         return True
+
+#     else:
+#         return False
+
