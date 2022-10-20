@@ -96,5 +96,26 @@
     
 #     print(a, b)
 
+# 자연수 뒤집어 배열로 만들기
 
+# def solution(n):
+#     answer = []
+#     # for i in range(str(n)):
+#     #     answer.append(i[::-1])
+#     for i in list(str(n)[::-1]):
+#         answer.append(int(i))
+#     return answer
 
+# solution(12345)
+
+# 정수 제곱근 판별
+
+# import math
+
+# def solution(n):
+#     answer = 0
+    
+#     if int(math.sqrt(n)) == math.sqrt(n):
+#         return (math.sqrt(n) + 1) ** 2
+#     else:
+#         return -1
