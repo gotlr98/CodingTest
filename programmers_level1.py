@@ -150,3 +150,28 @@
 #     else:
 #         return False
 
+# 문자열을 정수로 바꾸기
+
+# def solution(s):
+#     answer = 0
+
+#     if s[0] == '-':
+#         s = s[1:]
+#         return -int(s)
+#     elif s[0] == '-':
+#         s = s[1:]
+#         return int(s)
+#     else:
+#         return int(s)
+
+# 나머지가 1이 되는 수 찾기
+
+# def solution(n):
+#     count = 1
+    
+#     while True:
+#         if n % count == 1:
+#             break
+            
+#         count += 1
+#     return count
