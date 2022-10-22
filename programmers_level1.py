@@ -176,3 +176,18 @@
 #         count += 1
 #     return count
 
+def anonymize_text(sentences):
+    bef = sentences.split(' ')
+    result = ''
+    for i in bef:
+        if i[0].lower() != i[0]:
+            for j in i:
+                result += 'X'
+            
+        else:
+            result += i
+        result += ' '
+                
+    return result[:-1]
+
+print(anonymize_text('John is old'))
