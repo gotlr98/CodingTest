@@ -176,18 +176,32 @@
 #         count += 1
 #     return count
 
-def anonymize_text(sentences):
-    bef = sentences.split(' ')
-    result = ''
-    for i in bef:
-        if i[0].lower() != i[0]:
-            for j in i:
-                result += 'X'
+# def anonymize_text(sentences):
+#     bef = sentences.split(' ')
+#     result = ''
+#     for i in bef:
+#         if i[0].lower() != i[0]:
+#             for j in i:
+#                 result += 'X'
             
-        else:
-            result += i
-        result += ' '
+#         else:
+#             result += i
+#         result += ' '
                 
-    return result[:-1]
+#     return result[:-1]
 
-print(anonymize_text('John is old'))
+# print(anonymize_text('John is old'))
+
+# 정수 내림차순으로 배치하기
+
+def solution(n):
+    answer = ''
+    a = []
+    for i in str(n):
+        a.append(i)
+    a.sort(reverse=True)
+    print(a)
+    for i in a:
+        answer += i
+    return int(answer)
+solution(123214)
