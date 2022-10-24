@@ -194,14 +194,26 @@
 
 # 정수 내림차순으로 배치하기
 
-def solution(n):
-    answer = ''
-    a = []
-    for i in str(n):
-        a.append(i)
-    a.sort(reverse=True)
-    print(a)
-    for i in a:
-        answer += i
-    return int(answer)
-solution(123214)
+# def solution(n):
+#     answer = ''
+#     a = []
+#     for i in str(n):
+#         a.append(i)
+#     a.sort(reverse=True)
+#     print(a)
+#     for i in a:
+#         answer += i
+#     return int(answer)
+
+# x만큼 간격이 있는 n개의 숫자
+
+# def solution(x, n):
+#     answer = []
+    
+#     sum = x
+#     for i in range(n):
+#         answer.append(sum)
+#         sum += x
+#     return answer
+
+# 
