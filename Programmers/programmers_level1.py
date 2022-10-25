@@ -252,12 +252,13 @@
 
 # 서울에서 김서방 찾기
 
-# def solution(seoul):
-#     answer = ''
-#     count = 0
-#     for i in seoul:
-#         if i == 'Kim':
-#             break
-#         count += 1
-#     return '김서방은 ' + str(count) + '에 있다'
+def solution(seoul):
+    answer = ''
+    count = 0
+    for i in seoul:
+        if i == 'Kim':
+            break
+        count += 1
+    return '김서방은 ' + str(count) + '에 있다'
 
+solution(["Jane", "Kim"])
