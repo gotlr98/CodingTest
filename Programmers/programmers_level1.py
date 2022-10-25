@@ -252,13 +252,23 @@
 
 # 서울에서 김서방 찾기
 
-def solution(seoul):
-    answer = ''
-    count = 0
-    for i in seoul:
-        if i == 'Kim':
-            break
-        count += 1
-    return '김서방은 ' + str(count) + '에 있다'
+# def solution(seoul):
+#     answer = ''
+#     count = 0
+#     for i in seoul:
+#         if i == 'Kim':
+#             break
+#         count += 1
+#     return '김서방은 ' + str(count) + '에 있다'
 
-solution(["Jane", "Kim"])
+# 핸드폰 번호 가리기
+
+# def solution(phone_number):
+#     answer = ''
+#     emp = phone_number[:-4]
+#     back = phone_number[-4:]
+
+#     for i in range(len(emp)):
+#         answer += '*'
+#     return answer + back
+
