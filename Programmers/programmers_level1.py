@@ -286,10 +286,21 @@
 
 # 없는 숫자 더하기
 
-def solution(num):
-    sum = 0
-    for i in range(10):
-        if i not in num:
-            sum += i
+# def solution(num):
+#     sum = 0
+#     for i in range(10):
+#         if i not in num:
+#             sum += i
 
+#     return sum
+
+# 내적
+
+def solution(a, b):
+    count = 0
+    sum = 0
+    for i in a:
+        sum += i * b[count]
+        count += 1
     return sum
+
