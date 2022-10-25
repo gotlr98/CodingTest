@@ -272,3 +272,15 @@
 #         answer += '*'
 #     return answer + back
 
+# 음양 더하기
+
+def solution(absolutes, sign):
+    answer = 0
+    count = 0
+    for i in sign:
+        if i == 'false':
+            absolutes[count] = -absolutes[count]
+        count += 1
+    print(absolutes)
+    return sum(absolutes)
+
