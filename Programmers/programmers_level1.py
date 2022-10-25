@@ -327,11 +327,40 @@
 
 # 가운데 글자 가져오기
 
-def solution(s):
+# def solution(s):
 
-    if len(s) % 2 == 0:
-        return s[(len(s)//2)-1] + s[(len(s)//2)]
-    else:
-        return s[len(s)//2]
+#     if len(s) % 2 == 0:
+#         return s[(len(s)//2)-1] + s[(len(s)//2)]
+#     else:
+#         return s[len(s)//2]
 
-solution('abcde')
+# 수박수박수박수박수박수?
+
+# def solution(n):
+#     answer = ''
+    
+#     for i in range(n):
+#         if i % 2 == 0:
+#             answer += '수'
+#         else:
+#             answer += '박'
+#     return answer
+
+# 문자열 내림차순으로 배치하기
+
+# def solution(s):
+#     answer = ''
+#     answer_ = []
+#     answer__ = []
+#     for i in s:
+#         if i.lower() == i:
+#             answer_.append(i)
+#         else:
+#             answer__.append(i)
+    
+#     for i in sorted(answer_, reverse=True):
+#         answer += i
+#     for j in sorted(answer__, reverse=True):
+#         answer += j
+        
+#     return answer
