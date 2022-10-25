@@ -274,13 +274,22 @@
 
 # 음양 더하기
 
-def solution(absolutes, sign):
-    answer = 0
-    count = 0
-    for i in sign:
-        if i == 'false':
-            absolutes[count] = -absolutes[count]
-        count += 1
-    print(absolutes)
-    return sum(absolutes)
+# def solution(absolutes, sign):
+#     answer = 0
+#     count = 0
+#     for i in sign:
+#         if i == 'false':
+#             absolutes[count] = -absolutes[count]
+#         count += 1
+#     print(absolutes)
+#     return sum(absolutes)
 
+# 없는 숫자 더하기
+
+def solution(num):
+    sum = 0
+    for i in range(10):
+        if i not in num:
+            sum += i
+
+    return sum
