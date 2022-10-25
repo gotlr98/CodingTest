@@ -296,11 +296,42 @@
 
 # 내적
 
-def solution(a, b):
-    count = 0
-    sum = 0
-    for i in a:
-        sum += i * b[count]
-        count += 1
-    return sum
+# def solution(a, b):
+#     count = 0
+#     sum = 0
+#     for i in a:
+#         sum += i * b[count]
+#         count += 1
+#     return sum
 
+# 나누어 떨어지는 숫자 배열
+
+# def solution(arr, divisor):
+
+#     answer = []
+
+#     for i in arr:
+#         if i % divisor == 0:
+#             answer.append(i)
+#     if len(answer) == 0:
+#         answer.append(-1)
+#     return sorted(answer)
+
+# 제일 작은 수 제거하기
+
+# def solution(arr):
+
+#     target = min(arr)
+#     arr.remove(target)
+#     return arr
+
+# 가운데 글자 가져오기
+
+def solution(s):
+
+    if len(s) % 2 == 0:
+        return s[(len(s)//2)-1] + s[(len(s)//2)]
+    else:
+        return s[len(s)//2]
+
+solution('abcde')
