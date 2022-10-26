@@ -367,11 +367,29 @@
 
 # 문자열 다루기 기본
 
-def solution(s):
-    if len(s) == 4 or len(s) == 6:
-        for i in s:
-            if i.isdigit() == False:
-                return False
-        return True
-    else:
-        return False
+# def solution(s):
+#     if len(s) == 4 or len(s) == 6:
+#         for i in s:
+#             if i.isdigit() == False:
+#                 return False
+#         return True
+#     else:
+#         return False
+
+# 약수의 개수와 덧셈
+
+# def solution(left, right):
+#     count = 0
+#     list = []
+#     for i in range(left, right+1):
+#         for j in range(1, i+1):
+#             if i % j == 0:
+#                 count += 1
+
+#         if count % 2 == 0:
+#             list.append(i)
+#         else:
+#             list.append(-i)
+#         count = 0
+
+#     return sum(list)
