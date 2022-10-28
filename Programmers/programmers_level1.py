@@ -396,12 +396,26 @@
 
 # 행렬의 덧셈
 
-def solution(arr1, arr2):
-    answer = []
+# def solution(arr1, arr2):
+#     answer = []
     
-    for i in range(len(arr1)):
-        sum = []
-        for j in range(len(arr1[i])):
-            sum.append(arr1[i][j] + arr2[i][j])
-        answer.append(sum)
-    return answer
+#     for i in range(len(arr1)):
+#         sum = []
+#         for j in range(len(arr1[i])):
+#             sum.append(arr1[i][j] + arr2[i][j])
+#         answer.append(sum)
+#     return answer
+
+# 부족한 금액 계산하기
+
+def solution(price, money, count):
+
+    answer = 0
+    for i in range(count):
+
+        answer += price * (i+1)
+
+    if money - answer > 0 :
+        return 0
+    else:
+        return abs(answer-money)
