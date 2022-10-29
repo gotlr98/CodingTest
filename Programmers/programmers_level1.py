@@ -408,14 +408,22 @@
 
 # 부족한 금액 계산하기
 
-def solution(price, money, count):
+# def solution(price, money, count):
 
-    answer = 0
-    for i in range(count):
+#     answer = 0
+#     for i in range(count):
 
-        answer += price * (i+1)
+#         answer += price * (i+1)
 
-    if money - answer > 0 :
-        return 0
-    else:
-        return abs(answer-money)
+#     if money - answer > 0 :
+#         return 0
+#     else:
+#         return abs(answer-money)
+
+# 직사각형 별찍기
+
+a, b = map(int, input().strip().split(' '))
+for i in range(b):
+    for j in range(a):
+        print('*', end='')
+    print('')
