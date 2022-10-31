@@ -422,8 +422,15 @@
 
 # 직사각형 별찍기
 
-a, b = map(int, input().strip().split(' '))
-for i in range(b):
-    for j in range(a):
-        print('*', end='')
-    print(' ')
+# a, b = map(int, input().strip().split(' '))
+# for i in range(b):
+#     for j in range(a):
+#         print('*', end='')
+#     print('')
+
+# 
+import math
+
+def solution(a,b):
+    
+    return(math.gcd(a,b),math.lcm(a,b))
