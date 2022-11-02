@@ -432,5 +432,4 @@
 import math
 
 def solution(a,b):
-    print(math.gcd(a,b))
     return(math.gcd(a,b),math.lcm(a,b))
