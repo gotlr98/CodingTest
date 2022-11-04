@@ -432,5 +432,5 @@
 import math
 
 def solution(a,b):
-    print('a')
+    print('b')
     return(math.gcd(a,b),math.lcm(a,b))
