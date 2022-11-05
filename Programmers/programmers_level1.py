@@ -446,3 +446,22 @@ def solution(n, m):
     answer.append(LCM(n,m))
             
     return answer
+
+# 같은 숫자는 싫어
+
+def solution(arr):
+    answer = []
+    
+    answer.append(arr[0])
+    arr.remove(arr[0])
+    count = 0
+    for i in arr:
+        if i == answer[count]:
+            
+            pass
+        else:
+            answer.append(i)
+            count+=1
+    return answer
+
+solution([1,1,3,3,0,1,1])
