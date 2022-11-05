@@ -428,9 +428,21 @@
 #         print('*', end='')
 #     print('')
 
-# 
-import math
+# 최대공약수와 최소공배수
 
-def solution(a,b):
-    print('b')
-    return(math.gcd(a,b),math.lcm(a,b))
+def GCD(n,m):
+    while(m):
+        n,m = m,n%m
+    return n
+
+def LCM(n,m):
+    result = (n*m) // GCD(n,m)
+    return result
+
+def solution(n, m):
+    answer = []
+
+    answer.append(GCD(n,m))
+    answer.append(LCM(n,m))
+            
+    return answer
