@@ -449,19 +449,34 @@ def solution(n, m):
 
 # 같은 숫자는 싫어
 
-def solution(arr):
-    answer = []
+# def solution(arr):
+#     answer = []
     
-    answer.append(arr[0])
-    arr.remove(arr[0])
-    count = 0
-    for i in arr:
-        if i == answer[count]:
+#     answer.append(arr[0])
+#     arr.remove(arr[0])
+#     count = 0
+#     for i in arr:
+#         if i == answer[count]:
             
-            pass
-        else:
-            answer.append(i)
-            count+=1
-    return answer
+#             pass
+#         else:
+#             answer.append(i)
+#             count+=1
+#     return answer
 
-solution([1,1,3,3,0,1,2])
+# 이상한 문자 만들기
+
+def solution(s):
+    answer = ''
+    count = 0
+    for i in s.split(' '):
+        for j in i:
+            if count % 2 == 0:
+                answer += j.upper()
+                
+            else:
+                answer += j
+            count += 1
+        answer += ' '
+        count = 0
+    return answer[:-1]
