@@ -479,4 +479,4 @@ def solution(s):
             count += 1
         answer += ' '
         count = 0
-    return answer[:-1]
+    return answer
