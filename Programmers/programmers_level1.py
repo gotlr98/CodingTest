@@ -430,22 +430,22 @@
 
 # 최대공약수와 최소공배수
 
-def GCD(n,m):
-    while(m):
-        n,m = m,n%m
-    return n
+# def GCD(n,m):
+#     while(m):
+#         n,m = m,n%m
+#     return n
 
-def LCM(n,m):
-    result = (n*m) // GCD(n,m)
-    return result
+# def LCM(n,m):
+#     result = (n*m) // GCD(n,m)
+#     return result
 
-def solution(n, m):
-    answer = []
+# def solution(n, m):
+#     answer = []
 
-    answer.append(GCD(n,m))
-    answer.append(LCM(n,m))
+#     answer.append(GCD(n,m))
+#     answer.append(LCM(n,m))
             
-    return answer
+#     return answer
 
 # 같은 숫자는 싫어
 
@@ -466,17 +466,17 @@ def solution(n, m):
 
 # 이상한 문자 만들기
 
-def solution(s):
-    answer = ''
-    count = 0
-    for i in s.split(' '):
-        for j in i:
-            if count % 2 == 0:
-                answer += j.upper()
-                
-            else:
-                answer += j
-            count += 1
-        answer += ' '
-        count = 0
-    return answer
+# def solution(s):
+#     answer = ''
+#     count = 0
+
+#     for i in (s.lower()).split(' '):
+#         for j in i:
+#             if count % 2 == 0:
+#                 answer += j.upper()
+#             else:
+#                 answer += j
+#             count += 1
+#         answer += ' '
+#         count = 0
+#     return answer[:-1]
