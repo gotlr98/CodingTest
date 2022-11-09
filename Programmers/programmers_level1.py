@@ -480,3 +480,13 @@
 #         answer += ' '
 #         count = 0
 #     return answer[:-1]
+
+# 평균
+
+count = int(input())
+score = list(map(int,input().split()))
+conv_score = []
+
+for i in range(count):
+    conv_score.append(score[i] * 100/(max(score)))
+print(sum(conv_score)/len(score))
