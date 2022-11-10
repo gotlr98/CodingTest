@@ -494,3 +494,36 @@ def solution(n):
         answer += int(i) * (3**count)
         count += 1
     return answer
+
+# 예산
+
+# def solution(d, budget):
+#     result = 0
+
+#     d.sort()
+#     count = 0
+#     for i in d:
+#         if result + i > budget:
+#             break
+#         else:
+#             result += i
+#             count += 1
+#     return count
+
+# 시저암호
+
+def solution(s, n):
+    a = ''
+    for i in s:
+        if i == ' ':
+            a += ' '
+            pass
+        else:
+            if i == 'Z':
+                a += chr((ord(i)+n+6))
+            elif i == 'z':
+                a += chr((ord(i)-26+n))
+            else:
+                a += chr((ord(i)+n))
+    return a
+print(solution('a B Z', 4))
