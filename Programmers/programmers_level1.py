@@ -481,20 +481,16 @@
 #         count = 0
 #     return answer[:-1]
 
-# 평균
+# 3진법 뒤집기
 
-# count = int(input())
-# score = list(map(int,input().split()))
-# conv_score = []
-
-# for i in range(count):
-#     conv_score.append(score[i] * 100/(max(score)))
-# print(sum(conv_score)/len(score))
-
-# 검증수
-
-num = list(map(int, input().split()))
-sum = 0
-for i in num:
-    sum += i**2
-print(sum%10)
+def solution(n):
+    answer = 0
+    a = ''
+    while(n):
+        a += str(n % 3)
+        n = n // 3
+    count = 0
+    for i in a[::-1]:
+        answer += int(i) * (3**count)
+        count += 1
+    return answer

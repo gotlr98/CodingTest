@@ -22,3 +22,20 @@
 # else:
 #     print(max_val[0])
 
+# 평균
+
+# count = int(input())
+# score = list(map(int,input().split()))
+# conv_score = []
+
+# for i in range(count):
+#     conv_score.append(score[i] * 100/(max(score)))
+# print(sum(conv_score)/len(score))
+
+# 검증수
+
+# num = list(map(int, input().split()))
+# sum = 0
+# for i in num:
+#     sum += i**2
+# print(sum%10)
