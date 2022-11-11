@@ -519,7 +519,7 @@ def solution(s, n):
             a += ' '
             pass
         else:
-            if i == 'Z':
+            if 96 >= (ord(i)+n) and (ord(i)+n) >= 91:
                 a += chr((ord(i)+n+6))
             elif i == 'z':
                 a += chr((ord(i)-26+n))
