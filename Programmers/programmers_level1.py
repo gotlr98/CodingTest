@@ -521,9 +521,9 @@ def solution(s, n):
         else:
             if 96 >= (ord(i)+n) and (ord(i)+n) >= 91:
                 a += chr((ord(i)+n+6))
-            elif i == 'z':
+            elif (ord(i)+n) >= 123:
                 a += chr((ord(i)-26+n))
             else:
                 a += chr((ord(i)+n))
     return a
-print(solution('a B Z', 4))
+print(solution('a B y',25))

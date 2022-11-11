@@ -39,3 +39,19 @@
 # for i in num:
 #     sum += i**2
 # print(sum%10)
+
+# 문자열 반복
+
+count = int(input())
+a = []
+b = []
+for i in range(count):
+    k,j = input().split()
+    a.append(k)
+    b.append(j)
+m = 0
+for i in b:
+    for j in i:
+        print(j*int(a[m]), end='')
+    m += 1
+    print()
