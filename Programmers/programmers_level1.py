@@ -512,18 +512,26 @@ def solution(n):
 
 # 시저암호
 
-def solution(s, n):
-    a = ''
-    for i in s:
-        if i == ' ':
-            a += ' '
-            pass
-        else:
-            if 96 >= (ord(i)+n) and (ord(i)+n) >= 91:
-                a += chr((ord(i)+n+6))
-            elif (ord(i)+n) >= 123:
-                a += chr((ord(i)-26+n))
-            else:
-                a += chr((ord(i)+n))
-    return a
-print(solution('a B y',25))
+# def solution(s, n):
+#     a = ''
+#     for i in s:
+#         if i == ' ':
+#             a += ' '
+#             pass
+#         else:
+#             if (ord(i)+n) >= 91:
+#                 a += chr((ord(i)+n-26))
+#             elif (ord(i)+n) >= 123:
+#                 a += chr((ord(i)+n-26))
+#             else:
+#                 a += chr((ord(i)+n))
+#     return a
+# print(solution('a A z',25))
+
+# 최소직사각형
+def solution(sizes):
+    
+
+    
+
+print(solution([[10, 7], [12, 3], [8, 15], [14, 7], [5, 15]]))
