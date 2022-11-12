@@ -530,7 +530,20 @@ def solution(n):
 
 # 최소직사각형
 def solution(sizes):
+    conv = []
+    for i, j in sizes:
+        if i <= j:
+            conv.append([j,i])
+        else:
+            conv.append([i,j])
     
+    width = []
+    length = []
+    for i, j in conv:
+        width.append(i)
+        length.append(j)
+
+    return max(width) * max(length)
 
     
 
