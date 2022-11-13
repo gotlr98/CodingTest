@@ -529,22 +529,36 @@ def solution(n):
 # print(solution('a A z',25))
 
 # 최소직사각형
-def solution(sizes):
-    conv = []
-    for i, j in sizes:
-        if i <= j:
-            conv.append([j,i])
-        else:
-            conv.append([i,j])
+
+# def solution(sizes):
+#     conv = []
+#     for i, j in sizes:
+#         if i <= j:
+#             conv.append([j,i])
+#         else:
+#             conv.append([i,j])
     
-    width = []
-    length = []
-    for i, j in conv:
-        width.append(i)
-        length.append(j)
+#     width = []
+#     length = []
+#     for i, j in conv:
+#         width.append(i)
+#         length.append(j)
 
-    return max(width) * max(length)
+#     return max(width) * max(length)
+
+# 문자열 내 마음대로 정렬하기
+
+def solution(strings, n):
 
     
+    strings.sort(key=lambda x : x[n])
 
-print(solution([[10, 7], [12, 3], [8, 15], [14, 7], [5, 15]]))
+    for i in range(len(strings)-1):
+        for j in range(1, len(strings)):
+            if strings[i][n] == strings[j][n]:
+                if strings[i] > strings[j]:
+                    strings[i], strings[j] = strings[j], strings[i]
+    return strings
+
+print(solution(["abce", "abcd", "cdx"], 2))
+    
