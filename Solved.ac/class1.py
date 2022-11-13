@@ -69,14 +69,23 @@
 
 # 음계
 
-ap = list(map(int, input().split()))
+# ap = list(map(int, input().split()))
 
-comp = sorted(ap)
-comp_ = sorted(ap, reverse=True)
+# comp = sorted(ap)
+# comp_ = sorted(ap, reverse=True)
 
-if ap == comp:
-    print('ascending')
-elif ap == comp_:
-    print('descending')
-else:
-    print('mixed')
+# if ap == comp:
+#     print('ascending')
+# elif ap == comp_:
+#     print('descending')
+# else:
+#     print('mixed')
+
+# 나머지
+
+a = []
+for i in range(10):
+    temp = int(input())
+    a.append(temp%42)
+
+print(len(set(a)))
