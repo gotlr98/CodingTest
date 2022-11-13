@@ -58,11 +58,25 @@
 
 # 상수
 
-num1, num2 = input().split()
+# num1, num2 = input().split()
 
-num1, num2 = num1[::-1], num2[::-1]
+# num1, num2 = num1[::-1], num2[::-1]
 
-if int(num1) >= int(num2):
-    print(num1)
+# if int(num1) >= int(num2):
+#     print(num1)
+# else:
+#     print(num2)
+
+# 음계
+
+ap = list(map(int, input().split()))
+
+comp = sorted(ap)
+comp_ = sorted(ap, reverse=True)
+
+if ap == comp:
+    print('ascending')
+elif ap == comp_:
+    print('descending')
 else:
-    print(num2)
+    print('mixed')
