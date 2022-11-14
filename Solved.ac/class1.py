@@ -83,9 +83,34 @@
 
 # 나머지
 
-a = []
-for i in range(10):
-    temp = int(input())
-    a.append(temp%42)
+# a = []
+# for i in range(10):
+#     temp = int(input())
+#     a.append(temp%42)
 
-print(len(set(a)))
+# print(len(set(a)))
+
+# OX퀴즈
+
+count = int(input())
+
+quiz = []
+for i in range(count):
+    quiz.append(input())
+
+sum = 0
+sa = 0
+count_ = 1
+for i in quiz:
+    for j in i:
+        if j == 'X':
+            sa = 0
+        
+        elif j == 'O':
+            sa += 1
+            sum += sa
+
+    
+    print(sum)
+    sum = 0
+    sa = 0
