@@ -132,5 +132,14 @@
 
 # 아스키 코드
 
-num = input()
-print(ord(num))
+# num = input()
+# print(ord(num))
+
+# a+b -4
+
+while True:
+    try:
+        a, b = map(int, input().split())
+        print(a+b)
+    except:
+        break
