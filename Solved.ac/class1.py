@@ -92,25 +92,45 @@
 
 # OX퀴즈
 
-count = int(input())
+# count = int(input())
 
-quiz = []
-for i in range(count):
-    quiz.append(input())
+# quiz = []
+# for i in range(count):
+#     quiz.append(input())
 
-sum = 0
-sa = 0
-count_ = 1
-for i in quiz:
-    for j in i:
-        if j == 'X':
-            sa = 0
+# sum = 0
+# sa = 0
+# count_ = 1
+# for i in quiz:
+#     for j in i:
+#         if j == 'X':
+#             sa = 0
         
-        elif j == 'O':
-            sa += 1
-            sum += sa
+#         elif j == 'O':
+#             sa += 1
+#             sum += sa
 
     
-    print(sum)
-    sum = 0
-    sa = 0
+#     print(sum)
+#     sum = 0
+#     sa = 0
+
+# 알파벳 찾기
+
+# alpha = input()
+# dict = {}
+# a = 'abcdefghijklmnopqrstuvwxyz'
+
+# for i in a:
+#     dict[i] = -1
+
+# for j in alpha:
+#     dict[j] = alpha.index(j)
+
+# for i in dict.values():
+#     print(i, end=' ')
+
+# 아스키 코드
+
+num = input()
+print(ord(num))
