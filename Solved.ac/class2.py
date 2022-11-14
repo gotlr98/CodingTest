@@ -17,18 +17,47 @@
 
 # 직각삼각형
 
-while True:
+# while True:
     
-    try:
-        a = list(map(int, input().split()))
+#     try:
+#         a = list(map(int, input().split()))
 
-        if a[0] == 0 and a[1] == 0 and a[2] == 0:
-            break
+#         if a[0] == 0 and a[1] == 0 and a[2] == 0:
+#             break
+#         else:
+#             a.sort()
+#             if a[0] ** 2 + a[1] ** 2 == a[2] ** 2:
+#                 print('right')
+#             else:
+#                 print('wrong')
+#     except:
+#         break
+
+# ACM 호텔
+
+count = int(input())
+answer = []
+temp = ''
+for i in range(count):
+    h, w, n = map(int, input().split())
+
+    if n % h == 0:
+        temp += str(h)
+    else:
+        temp += str(n % h)
+    
+    if n % h == 0:
+        if len(str(n // h)) == 1:
+            temp += str('0') + str((n // h))
         else:
-            a.sort()
-            if a[0] ** 2 + a[1] ** 2 == a[2] ** 2:
-                print('right')
-            else:
-                print('wrong')
-    except:
-        break
+            temp += str((n // h))
+    else:
+        if len(str(n // h)) == 1:
+            temp += str('0') + str((n // h)+1)
+        else:
+            temp += str((n // h)+1)
+    answer.append(temp)
+    temp = ''
+
+for i in answer:
+    print(int(i))
