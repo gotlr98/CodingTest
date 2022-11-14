@@ -47,12 +47,12 @@ for i in range(count):
         temp += str(n % h)
     
     if n % h == 0:
-        if len(str(n // h)) == 1:
+        if len(str(n // h)) == 1 and n // h < 9:
             temp += str('0') + str((n // h))
         else:
             temp += str((n // h))
     else:
-        if len(str(n // h)) == 1:
+        if len(str(n // h)) == 1 and n // h < 9:
             temp += str('0') + str((n // h)+1)
         else:
             temp += str((n // h)+1)
@@ -61,3 +61,5 @@ for i in range(count):
 
 for i in answer:
     print(int(i))
+
+
