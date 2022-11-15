@@ -35,31 +35,53 @@
 
 # ACM 호텔
 
-count = int(input())
-answer = []
-temp = ''
-for i in range(count):
-    h, w, n = map(int, input().split())
+# count = int(input())
+# answer = []
+# temp = ''
+# for i in range(count):
+#     h, w, n = map(int, input().split())
 
-    if n % h == 0:
-        temp += str(h)
-    else:
-        temp += str(n % h)
+#     if n % h == 0:
+#         temp += str(h)
+#     else:
+#         temp += str(n % h)
     
-    if n % h == 0:
-        if len(str(n // h)) == 1 and n // h < 9:
-            temp += str('0') + str((n // h))
-        else:
-            temp += str((n // h))
-    else:
-        if len(str(n // h)) == 1 and n // h < 9:
-            temp += str('0') + str((n // h)+1)
-        else:
-            temp += str((n // h)+1)
-    answer.append(temp)
-    temp = ''
+#     if n % h == 0:
+#         if len(str(n // h)) == 1 and n // h < 9:
+#             temp += str('0') + str((n // h))
+#         else:
+#             temp += str((n // h))
+#     else:
+#         if len(str(n // h)) == 1 and n // h < 9:
+#             temp += str('0') + str((n // h)+1)
+#         else:
+#             temp += str((n // h)+1)
+#     answer.append(temp)
+#     temp = ''
 
-for i in answer:
-    print(int(i))
+# for i in answer:
+#     print(int(i))
 
+# 분해합
 
+num = int(input())
+
+count = 1
+
+while True:
+
+    temp = count
+
+    for i in str(count):
+        temp += int(i)
+    
+    if temp == num:
+        print(count)
+        break
+
+    if count > num:
+        print(0)
+        break
+
+    count += 1
+    temp = 0
