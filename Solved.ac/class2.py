@@ -108,18 +108,40 @@
 
 # 블랙잭
 
-count, limit = map(int, input().split())
+# count, limit = map(int, input().split())
 
-card = list(map(int, input().split()))
+# card = list(map(int, input().split()))
 
-result = []
+# result = []
 
-for i in range(len(card)-2):
-    for j in range(i+1, len(card)-1):
-        for k in range(j+1, len(card)):
-            if (card[i] + card[j] + card[k]) <= limit:
-                result.append(card[i] + card[j] + card[k])
-            else:
-                pass
-            
-print(max(result))
+# for i in range(len(card)-2):
+#     for j in range(i+1, len(card)-1):
+#         for k in range(j+1, len(card)):
+#             if (card[i] + card[j] + card[k]) <= limit:
+#                 result.append(card[i] + card[j] + card[k])
+#             else:
+#                 pass
+
+# print(max(result))
+
+# Hashing
+
+num = int(input())
+alpha = input()
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+dict = {}
+count = 1
+for i in alphabet:
+    dict[i] = count
+    count += 1
+
+count_ = 0
+sum = 0
+for i in alpha:
+
+    sum += (dict[i] * (31 ** count_)) % 1234567891
+    count_ += 1
+    
+print(sum)
