@@ -126,21 +126,32 @@
 
 # Hashing
 
-num = int(input())
-alpha = input()
+# num = int(input())
+# alpha = input()
 
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
+# alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-dict = {}
-count = 1
-for i in alphabet:
-    dict[i] = count
-    count += 1
+# dict = {}
+# count = 1
+# for i in alphabet:
+#     dict[i] = count
+#     count += 1
 
-count_ = 0
-sum = 0
-for i in alpha:
+# count_ = 0
+# sum = 0
+# for i in alpha:
 
-    sum += (dict[i] * (31 ** count_))
-    count_ += 1
-print(sum%1234567891)
+#     sum += (dict[i] * (31 ** count_))
+#     count_ += 1
+# print(sum%1234567891)
+
+while True:
+
+    num = int(input())
+    if num == 0:
+        break
+    else:
+        if str(num) == str(num)[::-1]:
+            print('yes')
+        else:
+            print('no')
