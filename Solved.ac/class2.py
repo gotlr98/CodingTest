@@ -145,13 +145,24 @@
 #     count_ += 1
 # print(sum%1234567891)
 
-while True:
+# 팰린드롬수
 
-    num = int(input())
-    if num == 0:
-        break
-    else:
-        if str(num) == str(num)[::-1]:
-            print('yes')
-        else:
-            print('no')
+# while True:
+
+#     num = int(input())
+#     if num == 0:
+#         break
+#     else:
+#         if str(num) == str(num)[::-1]:
+#             print('yes')
+#         else:
+#             print('no')
+
+# 최대공약수와 최소공배수
+
+import math
+
+num1, num2 = map(int,input().split())
+
+print(math.gcd(num1, num2))
+print(math.lcm(num1, num2))
