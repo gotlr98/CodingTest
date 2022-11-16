@@ -88,20 +88,38 @@
 
 # 벌집
 
-num = int(input())
-count = 0
-sum_num = 1
+# num = int(input())
+# count = 0
+# sum_num = 1
 
-while True:
+# while True:
 
-    sum_num = sum_num + 6 * count
+#     sum_num = sum_num + 6 * count
 
-    if sum_num >= num:
-        print(count+1) 
-        break
+#     if sum_num >= num:
+#         print(count+1) 
+#         break
     
-    if num == 1:
-        print(1)
-        break
+#     if num == 1:
+#         print(1)
+#         break
 
-    count += 1
+#     count += 1
+
+# 블랙잭
+
+count, limit = map(int, input().split())
+
+card = list(map(int, input().split()))
+
+result = []
+
+for i in range(len(card)-2):
+    for j in range(i+1, len(card)-1):
+        for k in range(j+1, len(card)):
+            if (card[i] + card[j] + card[k]) <= limit:
+                result.append(card[i] + card[j] + card[k])
+            else:
+                pass
+            
+print(max(result))
