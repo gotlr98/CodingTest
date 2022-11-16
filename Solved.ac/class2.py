@@ -64,24 +64,44 @@
 
 # 분해합
 
-num = int(input())
+# num = int(input())
 
-count = 1
+# count = 1
+
+# while True:
+
+#     temp = count
+
+#     for i in str(count):
+#         temp += int(i)
+    
+#     if temp == num:
+#         print(count)
+#         break
+
+#     if count > num:
+#         print(0)
+#         break
+
+#     count += 1
+#     temp = 0
+
+# 벌집
+
+num = int(input())
+count = 0
+sum_num = 1
 
 while True:
 
-    temp = count
+    sum_num = sum_num + 6 * count
 
-    for i in str(count):
-        temp += int(i)
-    
-    if temp == num:
-        print(count)
+    if sum_num >= num:
+        print(count+1) 
         break
-
-    if count > num:
-        print(0)
+    
+    if num == 1:
+        print(1)
         break
 
     count += 1
-    temp = 0
