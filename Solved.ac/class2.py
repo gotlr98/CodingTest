@@ -141,7 +141,6 @@ count_ = 0
 sum = 0
 for i in alpha:
 
-    sum += (dict[i] * (31 ** count_)) % 1234567891
+    sum += (dict[i] * (31 ** count_))
     count_ += 1
-    
-print(sum)
+print(sum%1234567891)
