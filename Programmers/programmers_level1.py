@@ -546,19 +546,32 @@ def solution(n):
 
 #     return max(width) * max(length)
 
-# 문자열 내 마음대로 정렬하기
+# # 문자열 내 마음대로 정렬하기
 
-def solution(strings, n):
+# def solution(strings, n):
 
     
-    strings.sort(key=lambda x : x[n])
+#     strings.sort(key=lambda x : x[n])
 
-    for i in range(len(strings)-1):
-        for j in range(1, len(strings)):
-            if strings[i][n] == strings[j][n]:
-                if strings[i] > strings[j]:
-                    strings[i], strings[j] = strings[j], strings[i]
-    return strings
+#     for i in range(len(strings)-1):
+#         for j in range(1, len(strings)):
+#             if strings[i][n] == strings[j][n]:
+#                 if strings[i] > strings[j]:
+#                     strings[i], strings[j] = strings[j], strings[i]
+#     return strings
 
-print(solution(["abce", "abcd", "cdx"], 2))
+# print(solution(["abce", "abcd", "cdx"], 2))
     
+# K번째수
+
+def solution(array, commands):
+    answer = []
+    
+    for i,j,k in commands:
+        temp = array[i-1:j]
+        temp.sort()
+        print(temp[k-1])
+        answer.append(temp[k-1])
+    return answer
+
+print(solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
