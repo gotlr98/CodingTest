@@ -160,9 +160,30 @@
 
 # 최대공약수와 최소공배수
 
-import math
+# import math
 
-num1, num2 = map(int,input().split())
+# num1, num2 = map(int,input().split())
 
-print(math.gcd(num1, num2))
-print(math.lcm(num1, num2))
+# print(math.gcd(num1, num2))
+# print(math.lcm(num1, num2))
+
+# 부녀회장이 될테야
+
+
+count = int(input())
+for i in range(count):
+    floor = int(input())
+    number = int(input())
+
+a = [[] for i in range(16)]
+sum = 1
+for i in range(1,15):
+    
+    a[0][i] = sum
+    sum += 1
+print(a)
+
+# for i in range(floor):
+#     for j in range(number):
+#         a[i][j] = 
+    
