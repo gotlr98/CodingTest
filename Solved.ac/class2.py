@@ -170,20 +170,39 @@
 # 부녀회장이 될테야
 
 
+# a = [[0 for col in range(15)] for row in range(15)]
+# for i in range(15):
+#     a[i][0] = 1
+#     for j in range(14):
+#         a[0][j] = j+1
 
+# for i in range(1,15):
+#     for j in range(1,15):
+#         a[i][j] = a[i][j-1] + a[i-1][j]
 
-a = [[0 for col in range(15)] for row in range(15)]
-for i in range(15):
-    a[i][0] = 1
-    for j in range(14):
-        a[0][j] = j+1
+# count = int(input())
+# for i in range(count):
+#     floor = int(input())
+#     number = int(input())
+#     print(a[floor][number-1])
 
-for i in range(1,15):
-    for j in range(1,15):
-        a[i][j] = a[i][j-1] + a[i-1][j]
+# def count_num(floor, number):
+    
+#     result = 0
+    
+#     if floor == 0:
+#         for i in range(number):
+#             result += i+1
+#         return result
 
-count = int(input())
-for i in range(count):
-    floor = int(input())
-    number = int(input())
-    print(a[floor][number-1])
+#     else:
+#         for i in range(number):
+#             result += count_num(i-1, number)
+#         return result
+
+# count = int(input())
+# for i in range(count):
+#     floor = int(input())
+#     number = int(input())
+#     print(count_num(floor-1,number))
+
