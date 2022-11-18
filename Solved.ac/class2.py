@@ -170,20 +170,20 @@
 # 부녀회장이 될테야
 
 
+
+
+a = [[0 for col in range(15)] for row in range(15)]
+for i in range(15):
+    a[i][0] = 1
+    for j in range(14):
+        a[0][j] = j+1
+
+for i in range(1,15):
+    for j in range(1,15):
+        a[i][j] = a[i][j-1] + a[i-1][j]
+
 count = int(input())
 for i in range(count):
     floor = int(input())
     number = int(input())
-
-a = [[] for i in range(16)]
-sum = 1
-for i in range(1,15):
-    
-    a[0][i] = sum
-    sum += 1
-print(a)
-
-# for i in range(floor):
-#     for j in range(number):
-#         a[i][j] = 
-    
+    print(a[floor][number-1])
