@@ -222,5 +222,3 @@ while True:
 
     sum -= slip
     day += 1
-
-    
