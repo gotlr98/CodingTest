@@ -208,17 +208,22 @@
 
 # 달팽이는 올라가고 싶다
 
-can, slip, meter = map(int, input().split())
+# can, slip, meter = map(int, input().split())
 
-day = 1
-sum = 0
-while True:
+# day = 1
+# sum = 0
+# while True:
 
-    sum += can
+#     sum += can
     
-    if sum >= meter:
-        print(day)
-        break
+#     if sum >= meter:
+#         print(day)
+#         break
 
-    sum -= slip
-    day += 1
+#     sum -= slip
+#     day += 1
+
+a = 'one4seveneight'
+
+a = a[1:]
+print(a)

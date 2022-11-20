@@ -483,17 +483,17 @@
 
 # 3진법 뒤집기
 
-def solution(n):
-    answer = 0
-    a = ''
-    while(n):
-        a += str(n % 3)
-        n = n // 3
-    count = 0
-    for i in a[::-1]:
-        answer += int(i) * (3**count)
-        count += 1
-    return answer
+# def solution(n):
+#     answer = 0
+#     a = ''
+#     while(n):
+#         a += str(n % 3)
+#         n = n // 3
+#     count = 0
+#     for i in a[::-1]:
+#         answer += int(i) * (3**count)
+#         count += 1
+#     return answer
 
 # 예산
 
@@ -564,14 +564,69 @@ def solution(n):
     
 # K번째수
 
-def solution(array, commands):
-    answer = []
+# def solution(array, commands):
+#     answer = []
     
-    for i,j,k in commands:
-        temp = array[i-1:j]
-        temp.sort()
-        print(temp[k-1])
-        answer.append(temp[k-1])
-    return answer
+#     for i,j,k in commands:
+#         temp = array[i-1:j]
+#         temp.sort()
+#         print(temp[k-1])
+#         answer.append(temp[k-1])
+#     return answer
 
-print(solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
+# print(solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
+
+# 숫자 문자열과 영단어
+
+def solution(s):
+    answer = ''
+
+    for i in range(len(s)):
+
+        if s[i].isdigit():
+            answer += str(s[i])
+            s = s[i+1:]
+
+        else:
+            if s[i] == 'z':
+                answer += str(0)
+                s = s[i+4:]
+        
+            elif s[i] == 'o':
+                answer += str(1)
+                s = s[i+3:]
+            
+            elif s[i] == 't':
+                if s[i+1] == 'w':
+                    answer += str(2)
+                    s = s[i+3:]
+                else:
+                    answer += str(3)
+                    s = s[i+5:]
+            
+            elif s[i] == 'f':
+                if s[i+1] == 'o':
+                    answer += str(4)
+                else:
+                    answer += str(5)
+                s = s[i+4:]
+            
+            elif s[i] == 's':
+                if s[i+1] == 'i':
+                    answer += str(6)
+                    s = s[i+3:]
+                else:
+                    answer += str(7)
+                    s = s[i+5:]
+            elif s[i] == 'e':
+                answer += str(8)
+                s = s[i+5:]
+            
+            else:
+                answer += str(9)
+                s = s[i+4:]
+        
+        
+    return int(answer)
+
+print(solution("one4seveneight"))
