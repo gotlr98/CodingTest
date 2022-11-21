@@ -208,7 +208,7 @@
 
 # 달팽이는 올라가고 싶다
 
-# can, slip, meter = map(int, input().split())
+can, slip, meter = map(int, input().split())
 
 # day = 1
 # sum = 0
@@ -223,7 +223,21 @@
 #     sum -= slip
 #     day += 1
 
-a = 'one4seveneight'
+a1 = can
+d = can - slip
+count = 0
 
-a = a[1:]
-print(a)
+# while True:
+
+    # if ((count ** 2) * d) - (count * d) >= 2*meter:
+    #     print(count)
+    #     break
+
+if ((meter - a1 + d) / d).is_integer():
+    print(int((meter - a1 + d) / d))
+else:
+    print(int((meter - a1 + d) / d)+1)
+
+    # break
+
+    # count += 1
