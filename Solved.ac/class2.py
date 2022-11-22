@@ -250,3 +250,5 @@ for i in range(count):
 number.sort()
 for i in number:
     print(i)
+
+    
