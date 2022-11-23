@@ -581,65 +581,27 @@
 def solution(s):
     answer = ''
 
-    # for i in range(len(s)):
-
-        # if s[i].isdigit():
-        #     answer += str(s[i])
-        #     s = s[i+1:]
-
-        # else:
-        #     if s[i] == 'z':
-        #         answer += str(0)
-        #         s = s[i+4:]
-        
-        #     elif s[i] == 'o':
-        #         answer += str(1)
-        #         s = s[i+3:]
-            
-        #     elif s[i] == 't':
-        #         if s[i+1] == 'w':
-        #             answer += str(2)
-        #             s = s[i+3:]
-        #         else:
-        #             answer += str(3)
-        #             s = s[i+5:]
-            
-        #     elif s[i] == 'f':
-        #         if s[i+1] == 'o':
-        #             answer += str(4)
-        #         else:
-        #             answer += str(5)
-        #         s = s[i+4:]
-            
-        #     elif s[i] == 's':
-        #         if s[i+1] == 'i':
-        #             answer += str(6)
-        #             s = s[i+3:]
-        #         else:
-        #             answer += str(7)
-        #             s = s[i+5:]
-        #     elif s[i] == 'e':
-        #         answer += str(8)
-        #         s = s[i+5:]
-            
-        #     else:
-        #         answer += str(9)
-        #         s = s[i+4:]
-
     dict = {}
-
-    alpha = ['zero', 'one', 'two', 'three',' four', 'five',
+    temp = ''
+    alpha = ['zero', 'one', 'two', 'three','four', 'five',
             'six', 'seven', 'eight', 'nine']
-    for i in range(10):
-        dict[i] = alpha[i]
+    count = 0
+    for i in alpha:
+        dict[i] = count
+        count += 1
 
-    while True:
-        for i in alpha:
-            if i in s:
-                i == dict.values()
-                s += dict.keys()
-        
+    for i in s:
+        if i.isdigit():
+            answer += str(i)
+
+        else:
+            temp += i
+
+            if temp in dict.keys():
+                print(1)
+                answer += str(dict[temp])
+                temp = ''
         
     return int(answer)
 
-print(solution("one4seveneight"))
+print(solution("23four5six7"))
