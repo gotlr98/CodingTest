@@ -242,13 +242,11 @@
 
 #     count += 1
 
-count = int(input())
+# 이항 계수 1
 
-number = []
-for i in range(count):
-    number.append(int(input()))
-number.sort()
-for i in number:
-    print(i)
+import math
 
+n, k = map(int, input().split())
+
+print(int(math.factorial(n) / (math.factorial(n-k) * math.factorial(k))))
     

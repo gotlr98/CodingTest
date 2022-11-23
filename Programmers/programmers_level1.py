@@ -598,7 +598,6 @@ def solution(s):
             temp += i
 
             if temp in dict.keys():
-                print(1)
                 answer += str(dict[temp])
                 temp = ''
         
