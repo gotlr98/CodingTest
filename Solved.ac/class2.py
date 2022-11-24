@@ -259,5 +259,6 @@ for i in range(count):
     temp.append(input())
 
 temp = set(temp)
-range_list = sorted(temp, key = lambda x : (len(x),x))
-print(range_list)
+range_list = sorted(temp, key = lambda x : (len(x), x))
+for i in range_list:
+    print(i)
