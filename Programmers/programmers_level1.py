@@ -578,29 +578,45 @@
 
 # 숫자 문자열과 영단어
 
-def solution(s):
-    answer = ''
+# def solution(s):
+#     answer = ''
 
-    dict = {}
-    temp = ''
-    alpha = ['zero', 'one', 'two', 'three','four', 'five',
-            'six', 'seven', 'eight', 'nine']
-    count = 0
-    for i in alpha:
-        dict[i] = count
-        count += 1
+#     dict = {}
+#     temp = ''
+#     alpha = ['zero', 'one', 'two', 'three','four', 'five',
+#             'six', 'seven', 'eight', 'nine']
+#     count = 0
+#     for i in alpha:
+#         dict[i] = count
+#         count += 1
 
-    for i in s:
-        if i.isdigit():
-            answer += str(i)
+#     for i in s:
+#         if i.isdigit():
+#             answer += str(i)
 
-        else:
-            temp += i
+#         else:
+#             temp += i
 
-            if temp in dict.keys():
-                answer += str(dict[temp])
-                temp = ''
+#             if temp in dict.keys():
+#                 answer += str(dict[temp])
+#                 temp = ''
         
-    return int(answer)
+#     return int(answer)
 
-print(solution("23four5six7"))
+# print(solution("23four5six7"))
+
+# 삼총사
+
+def solution(number):
+
+    count = 0
+
+    for i in range(len(number)-2):
+        for j in range(i+1, len(number)-1):
+            for k in range(j+1, len(number)):
+                if number[i] + number[j] + number[k] == 0:
+                    count += 1
+
+    return count
+
+print(solution([-2, 3, 0, 2, -5]))

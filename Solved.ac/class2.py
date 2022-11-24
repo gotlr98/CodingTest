@@ -273,9 +273,11 @@ while True:
     
     # for i in range(len(str(base))-2):
     #     if str(base)[i] == '6' and str(base)[i+1] == '6' and str(base)[i+2] == '6':
+    #         count_temp += 1
+    #         continue
     if str(base).find('666') != -1:
         count_temp += 1
-        # arr.append(base)
+        arr.append(base)
             
     if count_temp == count:
         print(base)
