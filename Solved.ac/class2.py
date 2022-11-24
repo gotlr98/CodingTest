@@ -244,9 +244,20 @@
 
 # 이항 계수 1
 
-import math
+# import math
 
-n, k = map(int, input().split())
+# n, k = map(int, input().split())
 
-print(int(math.factorial(n) / (math.factorial(n-k) * math.factorial(k))))
+# print(int(math.factorial(n) / (math.factorial(n-k) * math.factorial(k))))
     
+# 단어 정렬
+
+count = int(input())
+temp = []
+
+for i in range(count):
+    temp.append(input())
+
+temp = set(temp)
+range_list = sorted(temp, key = lambda x : (len(x),x))
+print(range_list)
