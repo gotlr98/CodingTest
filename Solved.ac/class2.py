@@ -252,13 +252,35 @@
     
 # 단어 정렬
 
+# count = int(input())
+# temp = []
+
+# for i in range(count):
+#     temp.append(input())
+
+# temp = set(temp)
+# range_list = sorted(temp, key = lambda x : (len(x), x))
+# for i in range_list:
+#     print(i)
+
+# 영화감독 숌
+
 count = int(input())
-temp = []
-
-for i in range(count):
-    temp.append(input())
-
-temp = set(temp)
-range_list = sorted(temp, key = lambda x : (len(x), x))
-for i in range_list:
-    print(i)
+count_temp = 0
+arr = []
+base = 0
+while True:
+    
+    # for i in range(len(str(base))-2):
+    #     if str(base)[i] == '6' and str(base)[i+1] == '6' and str(base)[i+2] == '6':
+    if str(base).find('666') != -1:
+            # count_temp += 1
+        arr.append(base)
+            
+    # if count_temp == count:
+    #     print(base)
+    #     break
+    if len(arr) == 10000:
+        break
+    base += 1
+print(arr[count-1])
