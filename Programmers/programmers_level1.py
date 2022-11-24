@@ -607,16 +607,30 @@
 
 # 삼총사
 
-def solution(number):
+# def solution(number):
 
-    count = 0
+#     count = 0
 
-    for i in range(len(number)-2):
-        for j in range(i+1, len(number)-1):
-            for k in range(j+1, len(number)):
-                if number[i] + number[j] + number[k] == 0:
-                    count += 1
+#     for i in range(len(number)-2):
+#         for j in range(i+1, len(number)-1):
+#             for k in range(j+1, len(number)):
+#                 if number[i] + number[j] + number[k] == 0:
+#                     count += 1
 
-    return count
+#     return count
 
-print(solution([-2, 3, 0, 2, -5]))
+# print(solution([-2, 3, 0, 2, -5]))
+
+# 두개 뽑아서 더하기
+
+def solution(numbers):
+    answer = []
+    
+    for i in range(len(numbers)-1):
+        for j in range(i+1, len(numbers)):
+            answer.append(numbers[i] + numbers[j])
+    answer.sort()
+    answer_ = list(set(answer))
+    return answer_
+
+print(solution([2,1,3,4,1]))
