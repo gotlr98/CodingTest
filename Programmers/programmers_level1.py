@@ -657,17 +657,88 @@
 
 # 폰켓몬
 
-def solution(nums):
+# def solution(nums):
 
-    can = int(len(nums)//2)
+#     can = int(len(nums)//2)
 
-    varie = len(list(set(nums)))
+#     varie = len(list(set(nums)))
 
-    if can < varie:
-        return can
+#     if can < varie:
+#         return can
 
-    elif varie < can:
-        return varie
+#     elif varie < can:
+#         return varie
     
-    else:
-        return can
+#     else:
+#         return can
+
+# 모의고사
+
+def solution(answers):
+
+    one = []
+    two = []
+    three = []
+    count_one = 1
+    for i in range(len(answers)):
+        one.append(count_one)
+        count_one += 1
+        if count_one > 5:
+            count_one = 1
+
+    count_two = 1
+    for i in range(len(answers)):
+        if i % 2 == 0:
+            two.append(2)
+            
+        else:
+            if count_two == 2:
+                count_two += 1
+                two.append(count_two)
+            else:
+                two.append(count_two)
+                count_two += 1
+        
+    count_three = [3,1,2,4,5]
+    count_three_ = 0
+    for i in range(len(answers)):
+        three.append(count_three[count_three_])
+        if i != 0 and i % 2 == 1:
+            count_three_ += 1
+
+        if count_three_ == 5 and i % 2 == 0:
+            count_three_ = 0
+
+    corr_one = 0
+    corr_two = 0
+    corr_three = 0
+    a = 0
+
+    for i in answers:
+        if one[a] == i:
+            corr_one += 1
+        if two[a] == i:
+            corr_two += 1
+        if three[a] == i:
+            corr_three += 1
+
+        a += 1
+    print(one)
+    print(two)
+    print(three)
+    first = []
+    first.append(corr_one)
+    first.append(corr_two)
+    first.append(corr_three)
+
+    m = max(first)
+    a = [i for i, v in enumerate(first) if v == m]
+    
+    answer = []
+    for i in a:
+        answer.append(i+1)
+    return answer
+    
+print(solution([1, 3, 2, 4, 2]))
+
+    
