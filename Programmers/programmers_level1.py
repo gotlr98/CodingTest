@@ -623,18 +623,34 @@
 
 # 두개 뽑아서 더하기
 
-def solution(numbers):
-    answer = []
+# def solution(numbers):
+#     answer = []
     
-    for i in range(len(numbers)-1):
-        for j in range(i+1, len(numbers)):
-            answer.append(numbers[i] + numbers[j])
-    answer.sort()
-    answer_ = list(set(answer))
-    answer_.sort()
-    return answer_
+#     for i in range(len(numbers)-1):
+#         for j in range(i+1, len(numbers)):
+#             answer.append(numbers[i] + numbers[j])
+#     answer.sort()
+#     answer_ = list(set(answer))
+#     answer_.sort()
+#     return answer_
 
+# 2016년
 
+from datetime import datetime
 
+def solution(a, b):
+    month, day = str(a), str(b)
+    if len(month) == 1:
+        month = '0'+month
 
-print(solution([2,1,3,4,1]))
+    date = '2016-' + month + '-' + day
+    datetime_date = datetime.strptime(date, '%Y-%m-%d')
+
+    dict_day = {}
+    st = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
+    for i in range(7):
+        dict_day[i] = st[i]
+
+    return dict_day[datetime_date.weekday()]
+
+print(solution(2, 29))
