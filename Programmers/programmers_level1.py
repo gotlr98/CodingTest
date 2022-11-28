@@ -631,6 +631,7 @@ def solution(numbers):
             answer.append(numbers[i] + numbers[j])
     answer.sort()
     answer_ = list(set(answer))
+    answer_.sort()
     return answer_
 
 
