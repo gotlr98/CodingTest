@@ -636,21 +636,38 @@
 
 # 2016년
 
-from datetime import datetime
+# from datetime import datetime
 
-def solution(a, b):
-    month, day = str(a), str(b)
-    if len(month) == 1:
-        month = '0'+month
+# def solution(a, b):
+#     month, day = str(a), str(b)
+#     if len(month) == 1:
+#         month = '0'+month
 
-    date = '2016-' + month + '-' + day
-    datetime_date = datetime.strptime(date, '%Y-%m-%d')
+#     date = '2016-' + month + '-' + day
+#     datetime_date = datetime.strptime(date, '%Y-%m-%d')
 
-    dict_day = {}
-    st = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
-    for i in range(7):
-        dict_day[i] = st[i]
+#     dict_day = {}
+#     st = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
+#     for i in range(7):
+#         dict_day[i] = st[i]
 
-    return dict_day[datetime_date.weekday()]
+#     return dict_day[datetime_date.weekday()]
 
-print(solution(2, 29))
+# print(solution(2, 29))
+
+# 폰켓몬
+
+def solution(nums):
+
+    can = int(len(nums)//2)
+
+    varie = len(list(set(nums)))
+
+    if can < varie:
+        return can
+
+    elif varie < can:
+        return varie
+    
+    else:
+        return can
