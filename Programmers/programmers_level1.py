@@ -687,6 +687,7 @@ def solution(answers):
             count_one = 1
 
     count_two = 1
+    
     for i in range(len(answers)):
         if i % 2 == 0:
             two.append(2)
