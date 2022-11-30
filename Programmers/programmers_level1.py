@@ -685,6 +685,7 @@ def solution(answers):
         count_one += 1
         if count_one > 5:
             count_one = 1
+            
 
     count_two = 1
     
