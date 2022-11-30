@@ -265,23 +265,41 @@
 
 # 영화감독 숌
 
-count = int(input())
-count_temp = 0
-# arr = []
-base = 0
-while True:
+# count = int(input())
+# count_temp = 0
+# # arr = []
+# base = 0
+# while True:
     
-    # for i in range(len(str(base))-2):
-    #     if str(base)[i] == '6' and str(base)[i+1] == '6' and str(base)[i+2] == '6':
-    #         count_temp += 1
-    #         continue
-    if str(base).find('666') != -1:
-        count_temp += 1
-        arr.append(base)
+#     # for i in range(len(str(base))-2):
+#     #     if str(base)[i] == '6' and str(base)[i+1] == '6' and str(base)[i+2] == '6':
+#     #         count_temp += 1
+#     #         continue
+#     if str(base).find('666') != -1:
+#         count_temp += 1
+#         arr.append(base)
             
-    if count_temp == count:
-        print(base)
-        break
-    # if len(arr) == 10000:
-    #     break
-    base += 1
+#     if count_temp == count:
+#         print(base)
+#         break
+#     # if len(arr) == 10000:
+#     #     break
+#     base += 1
+
+# 소수 찾기
+
+import math
+
+num = int(input())
+find = list(map(int, input().split()))
+find_num = 0
+for i in range(num):
+    count = 1
+    while True:
+        if find[i] % count == 0:
+            find_num += 1
+            break
+        elif count >= math.sqrt(count):
+            break
+        count += 1
+print(find_num)
