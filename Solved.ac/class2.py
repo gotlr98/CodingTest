@@ -288,20 +288,41 @@
 
 # 소수 찾기
 
-import math
+# import math
 
-def primenumber(x):
-    for i in range(2, int(math.sqrt(x)+1)):
-        if x % i == 0:
-            return False
-    return True
+# def primenumber(x):
+#     for i in range(2, int(math.sqrt(x)+1)):
+#         if x % i == 0:
+#             return False
+#     return True
+# num = int(input())
+# find = list(map(int, input().split()))
+# find_num = 0
+
+# for i in find:
+#     if i <= 1:
+#         pass
+#     elif primenumber(i):
+#         find_num += 1
+# print(find_num)
+
+# 덩치
+
 num = int(input())
-find = list(map(int, input().split()))
-find_num = 0
 
-for i in find:
-    if i <= 1:
-        pass
-    elif primenumber(i):
-        find_num += 1
-print(find_num)
+weight = []
+height = []
+
+
+for i in range(num):
+    a, b = map(int, input().split())
+    weight.append(a)
+    height.append(b)
+
+rank = [1] * len(weight)
+
+for i in range(len(weight)-1):
+    for j in range(i, len(weight)):
+        if weight[i] < weight[j] and height[i] < height[j]:
+            rank[i] += 1
+print(rank)
