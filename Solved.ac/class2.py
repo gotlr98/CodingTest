@@ -290,16 +290,18 @@
 
 import math
 
+def primenumber(x):
+    for i in range(2, int(math.sqrt(x)+1)):
+        if x % i == 0:
+            return False
+    return True
 num = int(input())
 find = list(map(int, input().split()))
 find_num = 0
-for i in range(num):
-    count = 1
-    while True:
-        if find[i] % count == 0:
-            find_num += 1
-            break
-        elif count >= math.sqrt(count):
-            break
-        count += 1
+
+for i in find:
+    if i <= 1:
+        pass
+    elif primenumber(i):
+        find_num += 1
 print(find_num)
