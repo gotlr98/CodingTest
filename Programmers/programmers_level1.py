@@ -777,3 +777,16 @@ def solution(n):
         if primenumber(i):
             answer += 1
     return answer
+
+def prime_list(n):  # 에라토스테네스의 체
+
+    sieve = [True] * n
+
+    m = int(n**0.5)
+
+    for i in range(2, m+1):
+        if seive[i]:
+            for j in range(i+i, n, i):
+                sieve[j] = False
+
+    return [i for i in range(2, n) if sieve[i] == True]
