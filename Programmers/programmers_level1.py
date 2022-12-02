@@ -674,89 +674,106 @@
 
 # 모의고사
 
-def solution(answers):
+# def solution(answers):
 
-    one = [1,2,3,4,5]
-    two = [2,1,2,3,2,4,2,5]
-    three = [3,3,1,1,2,2,4,4,5,5]
-    answer = []
-    correct = []
-    corr_one = 0
-    corr_two = 0
-    corr_three = 0
+#     one = [1,2,3,4,5]
+#     two = [2,1,2,3,2,4,2,5]
+#     three = [3,3,1,1,2,2,4,4,5,5]
+#     answer = []
+#     correct = []
+#     corr_one = 0
+#     corr_two = 0
+#     corr_three = 0
 
-    for i in range(len(answers)):
-        if one[(i)%5] == answers[i]:
-            corr_one += 1
-        if two[(i)%8] == answers[i]:
-            corr_two += 1
-        if three[(i)%10] == answers[i]:
-            corr_three += 1
+#     for i in range(len(answers)):
+#         if one[(i)%5] == answers[i]:
+#             corr_one += 1
+#         if two[(i)%8] == answers[i]:
+#             corr_two += 1
+#         if three[(i)%10] == answers[i]:
+#             corr_three += 1
 
-    correct.append(corr_one)
-    correct.append(corr_two)
-    correct.append(corr_three)
+#     correct.append(corr_one)
+#     correct.append(corr_two)
+#     correct.append(corr_three)
 
-    for i in range(len(correct)):
-        if max(correct) == correct[i]:
-            answer.append(i+1)
-    return answer
+#     for i in range(len(correct)):
+#         if max(correct) == correct[i]:
+#             answer.append(i+1)
+#     return answer
 
 
-    # count_one = 1
-    # for i in range(len(answers)):
-    #     one.append(count_one)
-    #     count_one += 1
-    #     if count_one > 5:
-    #         count_one = 1
+#     # count_one = 1
+#     # for i in range(len(answers)):
+#     #     one.append(count_one)
+#     #     count_one += 1
+#     #     if count_one > 5:
+#     #         count_one = 1
             
 
-    # count_two = 1
+#     # count_two = 1
     
-    # for i in range(len(answers)):
-    #     if i % 2 == 0:
-    #         two.append(2)
+#     # for i in range(len(answers)):
+#     #     if i % 2 == 0:
+#     #         two.append(2)
             
-    #     else:
-    #         if count_two == 2:
-    #             count_two += 1
-    #             two.append(count_two)
-    #         else:
-    #             two.append(count_two)
-    #             count_two += 1
+#     #     else:
+#     #         if count_two == 2:
+#     #             count_two += 1
+#     #             two.append(count_two)
+#     #         else:
+#     #             two.append(count_two)
+#     #             count_two += 1
         
-    # count_three = [3,1,2,4,5]
-    # count_three_ = 0
-    # for i in range(len(answers)):
-    #     three.append(count_three[count_three_])
-    #     if i != 0 and i % 2 == 1:
-    #         count_three_ += 1
+#     # count_three = [3,1,2,4,5]
+#     # count_three_ = 0
+#     # for i in range(len(answers)):
+#     #     three.append(count_three[count_three_])
+#     #     if i != 0 and i % 2 == 1:
+#     #         count_three_ += 1
 
-    #     if count_three_ == 5 and i % 2 == 0:
-    #         count_three_ = 0
-
-
-    # a = 0
-
-    # for i in answers:
-    #     if one[a] == i:
-    #         corr_one += 1
-    #     if two[a] == i:
-    #         corr_two += 1
-    #     if three[a] == i:
-    #         corr_three += 1
-
-    #     a += 1
-    # print(one)
-    # print(two)
-    # print(three)
-
-    # first.append(corr_one)
-    # first.append(corr_two)
-    # first.append(corr_three)
+#     #     if count_three_ == 5 and i % 2 == 0:
+#     #         count_three_ = 0
 
 
-    
-print(solution([1, 2, 3, 4, 5]))
+#     # a = 0
+
+#     # for i in answers:
+#     #     if one[a] == i:
+#     #         corr_one += 1
+#     #     if two[a] == i:
+#     #         corr_two += 1
+#     #     if three[a] == i:
+#     #         corr_three += 1
+
+#     #     a += 1
+#     # print(one)
+#     # print(two)
+#     # print(three)
+
+#     # first.append(corr_one)
+#     # first.append(corr_two)
+#     # first.append(corr_three)
+
 
     
+# print(solution([1, 2, 3, 4, 5]))
+
+    
+# 소수 찾기
+
+import math
+
+def primenumber(n):
+    for i in range(2, int(math.sqrt(n))+1):
+        if n % i == 0:
+            return False
+    return True
+
+def solution(n):
+    answer = 0
+    
+    for i in range(2, n+1):
+        if primenumber(i):
+            answer += 1
+    return answer
