@@ -811,4 +811,5 @@ def solution(nums):
                 if primenumber(nums[i]+nums[j]+nums[k]):
                     answer += 1
 
+
     return answer
