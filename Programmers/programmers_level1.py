@@ -819,9 +819,12 @@
 def solution(a, b, n):
     answer = 0
 
-    while n <= 0:
+    while True:
 
-        answer += n // a
+        if n < 1:
+            break
+        answer += (n // a) * b
+        print(answer)
         n = n - n//a
 
     return answer
