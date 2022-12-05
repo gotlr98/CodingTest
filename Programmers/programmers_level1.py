@@ -821,7 +821,7 @@ def solution(a, b, n):
 
     while True:
 
-        if n < 1:
+        if n <= 1:
             break
         answer += (n // a) * b
         print(answer)
