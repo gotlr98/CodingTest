@@ -827,6 +827,7 @@ def solution(a, b, n):
         print(answer)
         n = n - n//a
 
+
     return answer
 
 print(solution(2, 1, 20))
